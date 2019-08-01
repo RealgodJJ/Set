@@ -133,6 +133,7 @@ public class LinkedList<T> {
 
     // 从链表中删除元素e
     public void removeElement(T e) {
+        //寻找元素
         Node prev = dummyHead;
         while (prev.next != null) {
             if (prev.next.e.equals(e))
@@ -140,6 +141,7 @@ public class LinkedList<T> {
             prev = prev.next;
         }
 
+        //删除元素
         if (prev.next != null) {
             Node delNode = prev.next;
             prev.next = delNode.next;
